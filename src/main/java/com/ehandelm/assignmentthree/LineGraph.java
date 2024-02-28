@@ -24,6 +24,7 @@ public class LineGraph implements PropertyChangeListener {
     public LineGraph(AnchorPane graphVisual){
         this.graphVisual = graphVisual;
         this.pointVisuals = new ArrayList<>();
+        System.out.println(graphVisual.getWidth());
         Repository.getInstance().addPropertyChangeListener(this);
     }
 
@@ -36,6 +37,13 @@ public class LineGraph implements PropertyChangeListener {
         Line line = new Line(last.getX(), last.getY(), point.getX(), point.getY());
         line.setStrokeWidth(1);
         addChild(line);
+        if(point.getX() > MainController.VIEWABLE_GRAPH_WIDTH - 10){
+            reAlignGraph();
+        }
+    }
+
+    private void reAlignGraph(){
+        graphVisual.setTranslateX(graphVisual.getTranslateX() - X_INCREMENT);
     }
 
     private void addChild(Node node){

@@ -15,6 +15,7 @@ public class MainController {
     private AnchorPane graphBox1, graphBox2, graphBox3;
 
     public static final double GRAPH_HEIGHT = 150;
+    public static final double VIEWABLE_GRAPH_WIDTH = 300;
 
     public static double genRandomDouble(double max) {
         return genRandomDouble(0, max);
