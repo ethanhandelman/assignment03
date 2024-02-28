@@ -25,16 +25,11 @@ public class MainController {
         return min + (max - min) * random.nextDouble();
     }
 
-    private void addPoint(){
-        Point2D newPoint;
-        newPoint = new Point2D(Repository.getInstance().getNextX(), genRandomDouble(GRAPH_HEIGHT));
-
-        Repository.getInstance().addVal(newPoint);
-    }
-
     @FXML
     protected void onAddButtonClick() {
-        addPoint();
+        Point2D newPoint;
+        newPoint = new Point2D(Repository.getInstance().getNextX(), genRandomDouble(GRAPH_HEIGHT));
+        Repository.getInstance().addVal(newPoint);
     }
 
     @FXML

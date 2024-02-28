@@ -13,18 +13,12 @@ import java.beans.PropertyChangeListener;
 public class LineGraph implements PropertyChangeListener {
     private AnchorPane graphVisual;
     private Line avgLine;
-
     public static final double X_INCREMENT = 15;
-    //private double x, y;
 
     public LineGraph(AnchorPane graphVisual){
         this.graphVisual = graphVisual;
-        avgLine = new Line();
+        avgLine = new Line(-50, MainController.GRAPH_HEIGHT, MainController.VIEWABLE_GRAPH_WIDTH + 50, MainController.GRAPH_HEIGHT );
         avgLine.setStroke(Color.RED);
-        avgLine.setStartX(-50);
-        avgLine.setEndX(MainController.VIEWABLE_GRAPH_WIDTH + 50);
-        avgLine.setStartY(0);
-        avgLine.setEndY(0);
         addChild(avgLine);
         Repository.getInstance().addPropertyChangeListener(this);
     }
@@ -38,7 +32,7 @@ public class LineGraph implements PropertyChangeListener {
         line.setStrokeWidth(1);
         addChild(line);
 
-        drawLine();
+        drawAverageLine();
 
         if(point.getX() > MainController.VIEWABLE_GRAPH_WIDTH - 10){
             reAlignGraph();
@@ -55,7 +49,7 @@ public class LineGraph implements PropertyChangeListener {
         });
     }
 
-    private void drawLine(){
+    private void drawAverageLine(){
         avgLine.setEndX(graphVisual.getBoundsInLocal().getWidth() + 50);
         avgLine.setStartY(Repository.getInstance().getAverage());
         avgLine.setEndY(Repository.getInstance().getAverage());
