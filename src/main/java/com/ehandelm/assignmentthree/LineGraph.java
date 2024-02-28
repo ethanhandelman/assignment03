@@ -6,30 +6,30 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
-import javafx.scene.shape.Rectangle;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.util.ArrayList;
-import java.util.List;
 
 public class LineGraph implements PropertyChangeListener {
     private AnchorPane graphVisual;
-    private double height;
-    private List<Rectangle> pointVisuals;
+    private Line avgLine;
 
     public static final double X_INCREMENT = 15;
     //private double x, y;
 
     public LineGraph(AnchorPane graphVisual){
         this.graphVisual = graphVisual;
-        this.pointVisuals = new ArrayList<>();
-        System.out.println(graphVisual.getWidth());
+        avgLine = new Line();
+        avgLine.setStroke(Color.RED);
+        avgLine.setStartX(-50);
+        avgLine.setEndX(MainController.VIEWABLE_GRAPH_WIDTH + 50);
+        avgLine.setStartY(0);
+        avgLine.setEndY(0);
+        addChild(avgLine);
         Repository.getInstance().addPropertyChangeListener(this);
     }
 
     public void addPoint(Point2D point){
-        //double printX = pointVisuals.get(pointVisuals.size() - 1).getX() + X_INCREMENT;
         /*Rectangle rect = new Rectangle(point.getX()- 2.5, point.getY() - 2.5, 5, 5);
         rect.setFill(Color.BLACK);
         addChild(rect);*/
@@ -37,6 +37,9 @@ public class LineGraph implements PropertyChangeListener {
         Line line = new Line(last.getX(), last.getY(), point.getX(), point.getY());
         line.setStrokeWidth(1);
         addChild(line);
+
+        drawLine();
+
         if(point.getX() > MainController.VIEWABLE_GRAPH_WIDTH - 10){
             reAlignGraph();
         }
@@ -50,6 +53,12 @@ public class LineGraph implements PropertyChangeListener {
         Platform.runLater(() ->{
             graphVisual.getChildren().add(node);
         });
+    }
+
+    private void drawLine(){
+        avgLine.setEndX(graphVisual.getBoundsInLocal().getWidth() + 50);
+        avgLine.setStartY(Repository.getInstance().getAverage());
+        avgLine.setEndY(Repository.getInstance().getAverage());
     }
 
     @Override

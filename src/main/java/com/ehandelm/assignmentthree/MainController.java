@@ -3,7 +3,6 @@ package com.ehandelm.assignmentthree;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.util.Random;
@@ -27,13 +26,14 @@ public class MainController {
     }
 
     private void addPoint(){
-        Point2D newPoint  = new Point2D(Repository.getInstance().getLastPoint().getX() + LineGraph.X_INCREMENT, genRandomDouble(GRAPH_HEIGHT));
+        Point2D newPoint;
+        newPoint = new Point2D(Repository.getInstance().getNextX(), genRandomDouble(GRAPH_HEIGHT));
+
         Repository.getInstance().addVal(newPoint);
     }
 
     @FXML
     protected void onAddButtonClick() {
-        System.out.println("clicked");
         addPoint();
     }
 
