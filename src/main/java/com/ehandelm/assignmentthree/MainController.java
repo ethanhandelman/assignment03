@@ -1,6 +1,7 @@
 package com.ehandelm.assignmentthree;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Point2D;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -14,9 +15,8 @@ public class MainController {
     private AnchorPane graphBox1, graphBox2, graphBox3;
 
     public static final double GRAPH_HEIGHT = 150;
-    public static final double X_INCREMENT = 10;
 
-    public static double genRandomDouble(double max){
+    public static double genRandomDouble(double max) {
         return genRandomDouble(0, max);
     }
 
@@ -24,13 +24,24 @@ public class MainController {
         Random random = new Random();
         return min + (max - min) * random.nextDouble();
     }
-    @FXML
-    protected void onAddButtonClick() {
 
+    private void addPoint(){
+        Point2D newPoint  = new Point2D(Repository.getInstance().getLastPoint().getX() + LineGraph.X_INCREMENT, genRandomDouble(GRAPH_HEIGHT));
+        Repository.getInstance().addVal(newPoint);
     }
 
     @FXML
-    private void initialize(){
+    protected void onAddButtonClick() {
+        System.out.println("clicked");
+        addPoint();
+    }
+
+    @FXML
+    private void initialize() {
+        LineGraph graph1 = new LineGraph(graphBox3);
+        LineGraph graph2 = new LineGraph(graphBox2);
+        LineGraph graph3 = new LineGraph(graphBox1);
+
 
     }
 
