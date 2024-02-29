@@ -9,13 +9,9 @@ import java.util.List;
 public class Repository {
     //this is an example of the Singleton pattern
     private static Repository _instance;
-
     private PropertyChangeSupport changes = new PropertyChangeSupport(this);
-
     private List<Point2D> points;
-
     private double xTracker;
-
 
     private Repository(){
         points = new ArrayList<>();
@@ -53,7 +49,6 @@ public class Repository {
         else{
             return points.get(points.size() - 2);
         }
-
     }
 
     public double getNextX(){

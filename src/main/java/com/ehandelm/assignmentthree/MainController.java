@@ -3,6 +3,7 @@ package com.ehandelm.assignmentthree;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Button;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
 
 import java.util.Random;
@@ -10,6 +11,8 @@ import java.util.Random;
 public class MainController {
     @FXML
     private Button addButton;
+    @FXML
+    private SplitPane splitPane;
     @FXML
     private AnchorPane graphBox1, graphBox2, graphBox3;
 
