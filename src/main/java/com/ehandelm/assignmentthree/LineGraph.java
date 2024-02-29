@@ -27,7 +27,7 @@ public class LineGraph implements PropertyChangeListener {
         /*Rectangle rect = new Rectangle(point.getX()- 2.5, point.getY() - 2.5, 5, 5);
         rect.setFill(Color.BLACK);
         addChild(rect);*/
-        Point2D last = Repository.getInstance().getLastPoint();
+        Point2D last = Repository.getInstance().getPreviousPoint();
         Line line = new Line(last.getX(), last.getY(), point.getX(), point.getY());
         line.setStrokeWidth(1);
         line.setStroke(Color.BLUE);

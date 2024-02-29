@@ -39,7 +39,7 @@ public class Repository {
         changes.addPropertyChangeListener(l);
     }
 
-    public Point2D getLastPoint(){
+    public Point2D getPreviousPoint(){
         if(points.isEmpty()){
             return new Point2D(0, 0);
         }
@@ -51,6 +51,13 @@ public class Repository {
         }
     }
 
+    public Point2D getLastPoint()
+    {
+        if(points.isEmpty()){
+            return null;
+        }
+        return points.get(points.size() - 1);
+    }
     public double getNextX(){
         xTracker += LineGraph.X_INCREMENT;
         return xTracker;
