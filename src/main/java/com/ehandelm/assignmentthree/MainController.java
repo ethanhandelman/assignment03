@@ -38,10 +38,15 @@ public class MainController {
     @FXML
     private void initialize() {
         LineGraph graph1 = new LineGraph(graphBox3);
+        Repository.getInstance().addPropertyChangeListener(graph1);
         LineGraph graph2 = new LineGraph(graphBox2);
+        SquareDecorator squareDecorator = new SquareDecorator(graph2);
+        Repository.getInstance().addPropertyChangeListener(squareDecorator);
         LineGraph graph3 = new LineGraph(graphBox1);
         BoxPanel boxpanel = new BoxPanel(split);
-
+        SquareDecorator squareDecorator2 = new SquareDecorator(graph3);
+        BarDecorator barDecorator = new BarDecorator(squareDecorator2);
+        Repository.getInstance().addPropertyChangeListener(barDecorator);
     }
 
 }
