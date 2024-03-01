@@ -24,6 +24,6 @@
             </Button>
          </children>
       </VBox>
-      <AnchorPane prefHeight="601.0" prefWidth="270.0" />
+      <AnchorPane fx:id="split" prefHeight="601.0" prefWidth="270.0" />
    </items>
 </SplitPane>

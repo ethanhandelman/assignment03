@@ -1,6 +1,8 @@
 package com.ehandelm.assignmentthree;
 
 import javafx.geometry.Point2D;
+import javafx.scene.shape.Shape;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
@@ -11,10 +13,12 @@ public class Repository {
     private static Repository _instance;
     private PropertyChangeSupport changes = new PropertyChangeSupport(this);
     private List<Point2D> points;
+    private List<Shape> squares;
     private double xTracker;
 
     private Repository(){
         points = new ArrayList<>();
+        squares = new ArrayList<>();
         xTracker = -LineGraph.X_INCREMENT;
     }
 
@@ -61,6 +65,13 @@ public class Repository {
     public double getNextX(){
         xTracker += LineGraph.X_INCREMENT;
         return xTracker;
+    }
+
+    public void addSquare(Shape square){
+    }
+
+    public List<Shape> getSquares() {
+        return squares;
     }
 
     public static Repository getInstance(){
