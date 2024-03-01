@@ -17,15 +17,17 @@ public class LineGraph extends Component {
     public LineGraph(AnchorPane graphVisual){
         super(graphVisual);
         this.graphVisual = graphVisual;
-        avgLine = new Line(-50, MainController.GRAPH_HEIGHT, MainController.VIEWABLE_GRAPH_WIDTH + 50, MainController.GRAPH_HEIGHT );
+        avgLine = new Line(-50, MainController.GRAPH_HEIGHT, MainController.VIEWABLE_GRAPH_WIDTH + 50, MainController.GRAPH_HEIGHT);
         avgLine.setStroke(Color.RED);
         addChild(avgLine);
     }
 
     public void addPoint(Point2D point){
-        Point2D last = Repository.getInstance().getLastPoint();
+
+        Point2D last = Repository.getInstance().getPreviousPoint();
         Line line = new Line(last.getX(), last.getY(), point.getX(), point.getY());
         line.setStrokeWidth(1);
+        line.setStroke(Color.BLUE);
         addChild(line);
 
         drawAverageLine();
