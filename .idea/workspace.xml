@@ -5,20 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afa24707-c177-4531-b85b-e926f5eec98a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ehandelm/assignmentthree/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ehandelm/assignmentthree/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/target/classes/com/ehandelm/assignmentthree/BoxHandler1.class" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2d3wbVFplBaE3xsSjWNqQT5kC7G" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,6 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.MainApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true"

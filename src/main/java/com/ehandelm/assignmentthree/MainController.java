@@ -14,7 +14,7 @@ public class MainController {
     @FXML
     private SplitPane splitPane;
     @FXML
-    private AnchorPane graphBox1, graphBox2, graphBox3;
+    private AnchorPane graphBox1, graphBox2, graphBox3, split;
 
     public static final double GRAPH_HEIGHT = 150;
     public static final double VIEWABLE_GRAPH_WIDTH = 300;
@@ -40,7 +40,7 @@ public class MainController {
         LineGraph graph1 = new LineGraph(graphBox3);
         LineGraph graph2 = new LineGraph(graphBox2);
         LineGraph graph3 = new LineGraph(graphBox1);
-
+        BoxPanel boxpanel = new BoxPanel(split);
 
     }
 
