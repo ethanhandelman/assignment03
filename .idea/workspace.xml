@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afa24707-c177-4531-b85b-e926f5eec98a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxPanel.java" afterDir="false" />
+    <list default="true" id="d7e5cbd3-4546-4977-b0dc-c59d13441cf1" name="Changes" comment="Added getLastPoint method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/BoxHandler2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ehandelm/assignmentthree/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ehandelm/assignmentthree/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/SquareDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehandelm/assignmentthree/SquareDecorator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +74,5 @@
       <option name="presentableId" value="Default" />
       <updated>1709249880180</updated>
     </task>
-    <servers />
-  </component>
+
 </project>
