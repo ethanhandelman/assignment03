@@ -10,23 +10,19 @@ import javafx.scene.shape.Line;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-public class LineGraph implements PropertyChangeListener {
-    private AnchorPane graphVisual;
+public class LineGraph extends Component {
     private Line avgLine;
     public static final double X_INCREMENT = 15;
 
     public LineGraph(AnchorPane graphVisual){
+        super(graphVisual);
         this.graphVisual = graphVisual;
         avgLine = new Line(-50, MainController.GRAPH_HEIGHT, MainController.VIEWABLE_GRAPH_WIDTH + 50, MainController.GRAPH_HEIGHT );
         avgLine.setStroke(Color.RED);
         addChild(avgLine);
-        Repository.getInstance().addPropertyChangeListener(this);
     }
 
     public void addPoint(Point2D point){
-        /*Rectangle rect = new Rectangle(point.getX()- 2.5, point.getY() - 2.5, 5, 5);
-        rect.setFill(Color.BLACK);
-        addChild(rect);*/
         Point2D last = Repository.getInstance().getLastPoint();
         Line line = new Line(last.getX(), last.getY(), point.getX(), point.getY());
         line.setStrokeWidth(1);
@@ -41,12 +37,6 @@ public class LineGraph implements PropertyChangeListener {
 
     private void reAlignGraph(){
         graphVisual.setTranslateX(graphVisual.getTranslateX() - X_INCREMENT);
-    }
-
-    private void addChild(Node node){
-        Platform.runLater(() ->{
-            graphVisual.getChildren().add(node);
-        });
     }
 
     private void drawAverageLine(){
